@@ -1,1 +1,31 @@
-<p>add-product works!</p>
+<form id="productForm">
+    <div class=containerForm>
+        <input type="hidden" id="productId">
+
+        <label>Name</label>
+        <input type="text" id="name" required>
+
+        <label>Description</label>
+        <textarea id="description"></textarea>
+
+        <label>Purchase Price</label>
+        <input type="number" step="0.01" id="purchasePrice" required>
+
+        <label>Sell Price</label>
+        <input type="number" step="0.01" id="sellPrice">
+
+        <label>Category Id</label>
+        <input type="text" id="categoryId">
+
+        <label>Units In Stock</label>
+        <input type="number" id="unitsInStock">
+
+        <label>Stock Limit</label>
+        <input type="number" id="stockLimit">
+    </div>
+    <div class=FormButtons>
+
+        <button type="submit">Save</button>
+        <button type="reset">Clear</button>
+    </div>
+</form>

@@ -1,1 +1,24 @@
-<p>list-products works!</p>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Sell price</th>
+            <th>Stock</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="productTable">
+        @for (item of products; track $index){
+        <tr>
+            <td>{{item.name }}</td>
+            <td>{{item.description }}</td>
+            <td>{{item.sellPrice}}</td>
+            <td>{{item.stockLimit}}</td>
+            <td></td>
+        </tr>
+        }  @empty {
+        There are no items.
+        }
+    </tbody>
+</table>
