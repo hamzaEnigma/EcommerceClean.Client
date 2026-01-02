@@ -1,0 +1,39 @@
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse:collapse;">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Produit</th>
+            <th>Prix unitaire</th>
+            <th>Quantité</th>
+            <th>Total</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(item of cartItems;track $index){
+        <tr>
+            <td>{{$index + 1}}</td>
+            <td>{{item.name}}  </td>
+            <td>{{item.unitPrice}}</td>
+            <td>
+                <input type="number" min="1" [(ngModel)]="item.quantity" value="1" />
+            </td>
+            <td>{{item.total}}</td>
+            <td>
+                <button (click)="deleteItem($index)">Supprimer</button>
+            </td>
+        </tr>
+        }
+        @empty {
+        <tr>
+            <td>{{0}}</td>
+        </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4" align="right"><strong>Total panier :</strong></td>
+            <td colspan="2"><strong>.... €</strong></td>
+        </tr>
+    </tfoot>
+</table>

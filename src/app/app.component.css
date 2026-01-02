@@ -29,6 +29,10 @@
     sans-serif;
 
     box-sizing: border-box;
+
+    .divider {
+          width: 10%;
+    }
   }
 
   h1 {
