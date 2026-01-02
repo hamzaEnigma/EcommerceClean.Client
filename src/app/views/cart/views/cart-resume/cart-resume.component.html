@@ -16,7 +16,7 @@
             <td>{{item.name}}  </td>
             <td>{{item.unitPrice}}</td>
             <td>
-                <input type="number" min="1" [(ngModel)]="item.quantity" value="1" />
+                <input type="number" min="1" [(ngModel)]="item.quantity" (ngModelChange)="updateQuantity($index,$event)" value="1" />
             </td>
             <td>{{item.total}}</td>
             <td>
@@ -33,7 +33,7 @@
     <tfoot>
         <tr>
             <td colspan="4" align="right"><strong>Total panier :</strong></td>
-            <td colspan="2"><strong>.... €</strong></td>
+            <td colspan="2"><strong>{{total}}€</strong></td>
         </tr>
     </tfoot>
 </table>

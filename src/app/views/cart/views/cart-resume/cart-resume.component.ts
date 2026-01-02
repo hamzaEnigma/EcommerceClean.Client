@@ -11,15 +11,20 @@ import { FormsModule } from '@angular/forms';
 })
 export class CartResumeComponent {
   cartService = inject(CartService);
-  cartItems: CartItem[] = [];
-
+  cartItems: CartItem[] | undefined = [] ;
+  total: number | undefined;
   ngOnInit(){
     this.cartService.cartSubject.subscribe(data=>{
-      this.cartItems = data;
+      this.cartItems = data.cartItems;
+      this.total = data.total
     })
   }
 
   deleteItem(index:number){   
     this.cartService.deletItem(index);
+  }
+
+  updateQuantity(index:number,quantity:number){
+    this.cartService.updateQuantity(index,quantity);
   }
 }
