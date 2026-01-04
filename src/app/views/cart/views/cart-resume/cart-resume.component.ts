@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CartService } from '../../../../services/cart.service';
 import { CartItem } from '../../../../interfaces/cart/cart-item.model';
 import { FormsModule } from '@angular/forms';
+import { OrderService } from '../../../../services/order.service';
 
 @Component({
   selector: 'app-cart-resume',
@@ -11,8 +12,10 @@ import { FormsModule } from '@angular/forms';
 })
 export class CartResumeComponent {
   cartService = inject(CartService);
+  orderService = inject(OrderService);
   cartItems: CartItem[] | undefined = [] ;
   total: number | undefined;
+
   ngOnInit(){
     this.cartService.cartSubject.subscribe(data=>{
       this.cartItems = data.cartItems;
@@ -26,5 +29,10 @@ export class CartResumeComponent {
 
   updateQuantity(index:number,quantity:number){
     this.cartService.updateQuantity(index,quantity);
+  }
+
+  checkOut(){
+    this.orderService.CreateOrder().subscribe(data=>{      
+    })
   }
 }

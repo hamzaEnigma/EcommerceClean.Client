@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { AddProductComponent } from "./views/products/views/add-product/add-product/add-product.component";
 import { ListProductsComponent } from "./views/products/views/list-products/list-products.component";
 import { CartResumeComponent } from "./views/cart/views/cart-resume/cart-resume.component";
+import { OrdersListComponent } from "./views/orders/views/list-ordres/orders-list/orders-list.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ListProductsComponent, CartResumeComponent],
+  imports: [RouterOutlet, ListProductsComponent, CartResumeComponent, OrdersListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

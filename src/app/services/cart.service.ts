@@ -47,7 +47,7 @@ export class CartService {
     };
   }
 
-  private getCurrentCart(): Cart {
+  public getCurrentCart(): Cart {
     return this.cartSubject.value;
   }
 
