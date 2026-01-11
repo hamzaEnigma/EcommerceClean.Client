@@ -7,18 +7,11 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<main class="container">
-    <div class="left-side">
-        <app-list-products></app-list-products>
-    </div>
-    <div class="divider" role="separator" aria-label="Divider"></div>
-    <div class="right-side">
-      <!-- <app-list-products></app-list-products> -->
-       <app-cart-resume></app-cart-resume>
-           <div class="divider" role="separator" aria-label="Divider"></div>
-       <app-orders-list></app-orders-list>
-    </div>
-</main>
+<div class="container">
+
+      <router-outlet />
+
+</div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
@@ -29,4 +22,4 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 
-<router-outlet />
+

@@ -32,7 +32,6 @@ export class CartResumeComponent {
   }
 
   checkOut(){
-    this.orderService.CreateOrder().subscribe(data=>{      
-    })
+    this.orderService.CreateOrder().subscribe()
   }
 }

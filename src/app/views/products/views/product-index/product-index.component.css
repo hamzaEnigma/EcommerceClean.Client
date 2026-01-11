@@ -1,16 +1,12 @@
   :host {
-    .container {
-      display: flex;
-      flex-direction: row;
-      margin: 100px 10% 50px 10%;
-    }
+
 
     .left-side {
       width: 100%;
     }
 
     .right-side {
-      width: 100%; 
+      width: 100%;
     }
 
     .containerForm {

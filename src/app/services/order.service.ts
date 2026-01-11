@@ -4,6 +4,7 @@ import { Cart } from '../interfaces/cart/cart.model';
 import { OrderDetail } from '../interfaces/order/order-detail.model';
 import { Order } from '../interfaces/order/order.model';
 import { CartService } from './cart.service';
+import { OrderApiService } from './order-api.service';
 
 @Injectable({
   providedIn: 'root',
@@ -11,6 +12,7 @@ import { CartService } from './cart.service';
 export class OrderService {
   private apiUrl = 'https://localhost:7126/api/Orders';
   cartService = inject(CartService);
+  orderApi = inject(OrderApiService);
   constructor(private http: HttpClient) {}
 
   public CreateOrder() {
@@ -19,7 +21,7 @@ export class OrderService {
       orderDate : new Date(),
       orderDetails : this.mapCartItems(cart)
     }
-    return this.http.post(this.apiUrl,order);
+    return this.orderApi.CreateOrder(order);
   }
 
   private mapCartItems(cart: Cart): OrderDetail[] {
@@ -28,5 +30,9 @@ export class OrderService {
       quantity: item.quantity ?? 1,
     })) as OrderDetail[];
     return value;
+  }
+
+  public GetAllOrders(){
+    return this.orderApi.GetAll();
   }
 }

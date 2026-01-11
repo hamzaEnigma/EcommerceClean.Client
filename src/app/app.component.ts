@@ -7,7 +7,7 @@ import { OrdersListComponent } from "./views/orders/views/list-ordres/orders-lis
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ListProductsComponent, CartResumeComponent, OrdersListComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
