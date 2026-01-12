@@ -1,6 +1,6 @@
   :host {
 
-
+    width: 100%;
     .left-side {
       width: 100%;
     }
@@ -21,8 +21,7 @@
       align-items: center;
     }
 
-    font-family: arial,
-    sans-serif;
+
 
     box-sizing: border-box;
 

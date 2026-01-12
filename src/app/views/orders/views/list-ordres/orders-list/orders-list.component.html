@@ -1,11 +1,12 @@
-<table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse:collapse;">
+<table class="table table-striped">
     <thead>
         <tr>
-            <th></th>
+            <th>#</th>
             <th>Identifier</th>
             <th>Customer</th>
             <th>Date commande</th>
             <th>Total</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -16,6 +17,7 @@
             <td>{{item.customer}}</td>
             <td>{{item.orderDate }}</td>
             <td>{{item.total }}</td>
+            <td><button class="btn btn-primary btn-sm" (click)="showOrderDetails(item.orderId!)">Détails</button></td>
         </tr>
         }
     </tbody>

@@ -1,4 +1,11 @@
     .divider {
           width: 10%;
-          margin : 10px;
+          margin: 10px;
+    }
+
+    #quantity-id {
+          text-align: center;
+          width: 70px;
+          display: flex;
+          justify-content: center;
     }
